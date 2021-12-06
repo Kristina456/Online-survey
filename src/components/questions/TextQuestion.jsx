@@ -1,10 +1,13 @@
 import React from "react";
 
-export default function RatingQuestion({ question }) {
-	const { label, id, required } = question;
+export default function RatingQuestion({ question, onAnswer }) {
+	const { label, id, required, questionId } = question;
 
 	const onChange = (e) => {
-		console.log(e.target.value);
+		onAnswer({
+			questionId: questionId,
+			answer: e.target.value,
+		});
 	};
 
 	return (

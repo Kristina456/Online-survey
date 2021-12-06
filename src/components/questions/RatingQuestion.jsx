@@ -1,11 +1,12 @@
 import React from "react";
 import Question from "./components/Question";
 
-export default function RatingQuestion({ question }) {
+export default function RatingQuestion({ question, onAnswer }) {
 	const {
 		required,
 		label,
 		attributes: { min, max },
+		questionId,
 	} = question;
 
 	const showQuestions = () => {
@@ -17,7 +18,10 @@ export default function RatingQuestion({ question }) {
 	};
 
 	const onChange = (e) => {
-		console.log(e.target.value);
+		onAnswer({
+			questionId: questionId,
+			answer: e.target.value,
+		});
 	};
 
 	return (
