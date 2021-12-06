@@ -3,6 +3,7 @@ import { useNavigate } from "react-router";
 import Button from "./button/Button";
 import RatingQuestion from "./questions/RatingQuestion";
 import TextQuestion from "./questions/TextQuestion";
+import "./SurvayForm.scss";
 
 export default function SurvayForm({ survay }) {
 	const [answers, setAnswers] = useState([]);
@@ -54,9 +55,10 @@ export default function SurvayForm({ survay }) {
 		<div className="survay-form">
 			<h1 className="survay-form__title">{survay.data.attributes.title}</h1>
 			<div
+				className="survay-form__description"
 				dangerouslySetInnerHTML={{ __html: survay.data.attributes.description }}
 			></div>
-			<form onSubmit={handleSubmit}>
+			<form className="survay-form__form" onSubmit={handleSubmit}>
 				{showQuestions()}
 				<Button value={buttonText} />
 			</form>

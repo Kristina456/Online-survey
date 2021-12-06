@@ -5,7 +5,7 @@ export const MockSurvay200 = {
 		attributes: {
 			title: "Film feedback form",
 			description:
-				"<p>Thank you for participating in the film festival!</p><p>Please fill out this short survey so we can record yourfeedback.</p>",
+				"<p>Thank you for participating in the film festival!</p><p>Please fill out this short survey so we can record your feedback.</p>",
 			questions: [
 				{
 					questionId: "film",
@@ -17,7 +17,7 @@ export const MockSurvay200 = {
 				{
 					questionId: "review",
 					questionType: "rating",
-					label: "How would you rate the film? (1 - Very bad, 5 - Verygood)",
+					label: "How would you rate the film? (1 - Very bad, 5 - Very good)",
 
 					required: true,
 					attributes: {
