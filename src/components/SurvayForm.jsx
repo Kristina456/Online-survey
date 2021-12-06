@@ -51,8 +51,8 @@ export default function SurvayForm({ survay }) {
 	};
 
 	return (
-		<div>
-			<div>{survay.data.attributes.title}</div>
+		<div className="survay-form">
+			<h1 className="survay-form__title">{survay.data.attributes.title}</h1>
 			<div
 				dangerouslySetInnerHTML={{ __html: survay.data.attributes.description }}
 			></div>
