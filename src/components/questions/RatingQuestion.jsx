@@ -20,7 +20,7 @@ export default function RatingQuestion({ question, onAnswer }) {
 	const onChange = (e) => {
 		onAnswer({
 			questionId: questionId,
-			answer: e.target.value,
+			answer: Number(e.target.value),
 		});
 	};
 

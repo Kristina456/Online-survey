@@ -1,12 +1,19 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router";
 import Button from "./button/Button";
 import RatingQuestion from "./questions/RatingQuestion";
 import TextQuestion from "./questions/TextQuestion";
 
 export default function SurvayForm({ survay }) {
 	const [answers, setAnswers] = useState([]);
+	const navigate = useNavigate();
 
 	const buttonText = "Submit";
+
+	const handleSubmit = (e) => {
+		e.preventDefault();
+		navigate("/success", { state: answers });
+	};
 
 	const addAnswer = (answer) => {
 		setAnswers((current) => {
@@ -49,7 +56,7 @@ export default function SurvayForm({ survay }) {
 			<div
 				dangerouslySetInnerHTML={{ __html: survay.data.attributes.description }}
 			></div>
-			<form>
+			<form onSubmit={handleSubmit}>
 				{showQuestions()}
 				<Button value={buttonText} />
 			</form>
