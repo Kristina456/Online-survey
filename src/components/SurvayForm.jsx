@@ -1,8 +1,11 @@
 import React from "react";
+import Button from "./button/Button";
 import RatingQuestion from "./questions/RatingQuestion";
 import TextQuestion from "./questions/TextQuestion";
 
 export default function SurvayForm({ survay }) {
+	const buttonText = "Submit";
+
 	const showQuestions = () => {
 		return survay.data.attributes.questions.map((q) => {
 			switch (q.questionType) {
@@ -25,7 +28,7 @@ export default function SurvayForm({ survay }) {
 			></div>
 			<form>
 				{showQuestions()}
-				<button>Submit</button>
+				<Button value={buttonText} />
 			</form>
 		</div>
 	);
