@@ -1,10 +1,11 @@
 import React from "react";
 
-export default function RatingQuestion() {
+export default function RatingQuestion({ question }) {
+	const { label, id, required } = question;
 	return (
 		<div>
-			<label htmlFor="question">Some Question</label>
-			<input type="text" name="question" required />
+			<label htmlFor="question">{label}</label>
+			<input type="text" name="question" id={id} required={required} />
 		</div>
 	);
 }

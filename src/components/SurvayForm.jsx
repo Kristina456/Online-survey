@@ -7,7 +7,7 @@ export default function SurvayForm({ survay }) {
 		return survay.data.attributes.questions.map((q) => {
 			switch (q.questionType) {
 				case "text":
-					return <TextQuestion />;
+					return <TextQuestion key={q.questionId} question={q} />;
 
 				case "rating":
 					return <RatingQuestion />;
