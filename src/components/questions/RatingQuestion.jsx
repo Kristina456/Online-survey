@@ -16,8 +16,12 @@ export default function RatingQuestion({ question }) {
 		return radioInputs;
 	};
 
+	const onChange = (e) => {
+		console.log(e.target.value);
+	};
+
 	return (
-		<div>
+		<div onChange={onChange}>
 			<div>{label}</div>
 			{showQuestions()}
 		</div>
