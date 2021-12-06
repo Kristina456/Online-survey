@@ -1,8 +1,7 @@
-.card {
+html {
+	box-sizing: border-box;
+	font-size: 62, 5%; //1rem = 10px
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	width: 500px;
-	height: 400px;
-	border: 1px solid black;
 }
