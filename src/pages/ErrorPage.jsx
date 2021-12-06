@@ -1,6 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router";
 import Button from "../components/button/Button";
+import Card from "../components/card/Card";
 import { MockSurvay500 } from "../mocks/MockSurvay500";
 
 export default function ErrorPage() {
@@ -24,9 +25,9 @@ export default function ErrorPage() {
 	};
 
 	return (
-		<div>
+		<Card>
 			<div>{showErrors()}</div>
 			<Button onClick={returnHome} value={buttonText} />
-		</div>
+		</Card>
 	);
 }

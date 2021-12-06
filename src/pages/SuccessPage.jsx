@@ -1,5 +1,6 @@
 import React from "react";
 import { useLocation } from "react-router";
+import Card from "../components/card/Card";
 
 export default function SuccessPAge() {
 	const location = useLocation();
@@ -16,7 +17,7 @@ export default function SuccessPAge() {
 	};
 
 	return (
-		<div>
+		<Card>
 			{location.state ? (
 				<div>
 					<div>Thank you for paticipating in a survay</div>
@@ -26,6 +27,6 @@ export default function SuccessPAge() {
 			) : (
 				<div>Something went wrong please try again. </div>
 			)}
-		</div>
+		</Card>
 	);
 }

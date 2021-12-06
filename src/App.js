@@ -1,4 +1,4 @@
-import "./App.css";
+import "./App.scss";
 import PageRouter from "./PageRouter";
 
 function App() {
