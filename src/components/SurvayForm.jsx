@@ -10,7 +10,7 @@ export default function SurvayForm({ survay }) {
 					return <TextQuestion key={q.questionId} question={q} />;
 
 				case "rating":
-					return <RatingQuestion />;
+					return <RatingQuestion key={q.questionId} question={q} />;
 				default:
 					throw Error(`Question Type ${q.questionType} not supported`);
 			}
