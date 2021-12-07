@@ -1,0 +1,17 @@
+.btn,
+.btn:link,
+.btn:visited {
+	text-transform: uppercase;
+	text-decoration: none;
+	font-size: 1.5rem;
+	padding: 1.5rem 25%;
+	border-radius: 1rem;
+	transition: all 0.3s;
+	border: none;
+	cursor: pointer;
+	background-color: $color-green;
+}
+.btn:hover {
+	transform: translateY(-3px);
+	box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
+}

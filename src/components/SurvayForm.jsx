@@ -60,7 +60,9 @@ export default function SurvayForm({ survay }) {
 			></div>
 			<form className="survay-form__form" onSubmit={handleSubmit}>
 				{showQuestions()}
-				<Button value={buttonText} />
+				<div className="survay-form__btn">
+					<Button value={buttonText} />
+				</div>
 			</form>
 		</div>
 	);
