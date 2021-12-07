@@ -1,6 +1,7 @@
 import React from "react";
 import { useLocation } from "react-router";
 import Card from "../components/card/Card";
+import "./SuccessPage.scss";
 
 export default function SuccessPAge() {
 	const location = useLocation();
@@ -9,8 +10,10 @@ export default function SuccessPAge() {
 		if (location.state) {
 			return location.state.map((q) => (
 				<div>
-					<span>{q.questionId.toUpperCase()}: </span>
-					<span>{q.answer} </span>
+					<span className="success__answers--question">
+						{q.questionId.toUpperCase()}:{" "}
+					</span>
+					<span className="success__answers--answer">{q.answer} </span>
 				</div>
 			));
 		}
@@ -19,9 +22,9 @@ export default function SuccessPAge() {
 	return (
 		<Card>
 			{location.state ? (
-				<div>
-					<div>Thank you for paticipating in a survay</div>
-					<div>Your answers are:</div>
+				<div className="success">
+					<h1>Thank you for paticipating in a survay</h1>
+					<p>Your answers are:</p>
 					<div>{answers()}</div>
 				</div>
 			) : (
