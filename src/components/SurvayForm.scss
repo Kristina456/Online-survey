@@ -1,4 +1,6 @@
 .survay-form {
+	position: relative;
+
 	.survay-form__title {
 		text-align: center;
 	}
@@ -7,7 +9,7 @@
 	}
 	.survay-form__form {
 		margin: 2rem 0;
-		border: 1px solid black;
+		border: $border-sml;
 		padding: 1rem;
 	}
 }
