@@ -18,14 +18,14 @@
 	width: 2.5rem;
 	border-radius: $border-radius-large;
 	background-color: $color-gray-light;
-	border: $border-medium;
+	border: $border-medium-green;
 	transition: $transition-primary;
 }
 
 //On mouse-over, add background color
 .radio-btn__label:hover input ~ .radio-btn__style-input,
 .radio-btn__label input:checked ~ .radio-btn__style-input {
-	background-color: $color-gray-medium;
+	background-color: $color-green;
 }
 
 // Hidden when not checked
@@ -46,7 +46,7 @@
 	left: 30%;
 	width: 0.5rem;
 	height: 1rem;
-	border: $border-sml-black;
+	border: $border-sml-white;
 	border-width: 0 0.3rem 0.3rem 0;
 	transform: rotate(45deg) translate(-50%, -50%);
 	transition: all 0.3s;
