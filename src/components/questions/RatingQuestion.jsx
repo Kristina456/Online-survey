@@ -1,5 +1,6 @@
 import React from "react";
 import Question from "./components/Question";
+import "./RatingQuestion.scss";
 
 export default function RatingQuestion({ question, onAnswer }) {
 	const {
@@ -25,9 +26,9 @@ export default function RatingQuestion({ question, onAnswer }) {
 	};
 
 	return (
-		<div onChange={onChange}>
-			<div>{label}</div>
-			{showQuestions()}
+		<div onChange={onChange} className="rating-question">
+			<div className="rating-question__label">{label}</div>
+			<div className="rating-question__radio-btn">{showQuestions()} </div>
 		</div>
 	);
 }

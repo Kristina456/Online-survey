@@ -1,6 +1,7 @@
 //Color variables
 
-$color-gray: rgb(187, 186, 186);
+$color-gray-light: rgb(255, 255, 255);
+$color-gray-medium: rgb(175, 175, 175);
 $color-gray-dark: rgb(95, 94, 94);
 
 $color-black: rgb(0, 0, 0);
@@ -8,13 +9,19 @@ $color-black: rgb(0, 0, 0);
 //Border variables
 
 $border-sml-black: 0.1rem solid $color-black;
-$border-sml-gray: 0.1rem solid $color-gray;
+$border-sml-gray: 0.1rem solid $color-gray-medium;
+$border-medium: 3px solid $color-gray-medium;
 
 //Border radius
 
 $border-radius-sml: 0.2rem;
 $border-radius-medium: 1rem;
+$border-radius-large: 50%;
 
 //Opacity
 
 $opacity-medium: 0.2;
+
+//Transition
+
+$transition-primary: all 0.3s;
