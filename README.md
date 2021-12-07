@@ -11,6 +11,7 @@ This is a web application for an online survey for local film festival. The appl
 - Prettier 2.4.1
 - Craco 6.4.1
 - classnames 2.3.1
+- msw 0.36.1
 
 <br>
 
