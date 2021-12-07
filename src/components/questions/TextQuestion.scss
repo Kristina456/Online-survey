@@ -1,0 +1,15 @@
+.text-question {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 1rem;
+
+	.text-question__input {
+		height: 1.5rem;
+		border: $border-sml-gray;
+		border-radius: $border-radius-sml;
+		margin-top: 0.5rem;
+		padding: 0 0.5rem;
+		font-size: $font-size-sml;
+		color: $color-gray-dark;
+	}
+}

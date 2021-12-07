@@ -1,4 +1,5 @@
 import React from "react";
+import "./TextQuestion.scss";
 
 export default function RatingQuestion({ question, onAnswer }) {
 	const { label, id, required, questionId } = question;
@@ -11,9 +12,10 @@ export default function RatingQuestion({ question, onAnswer }) {
 	};
 
 	return (
-		<div>
+		<div className="text-question">
 			<label htmlFor="question">{label}</label>
 			<input
+				className="text-question__input"
 				type="text"
 				name="question"
 				id={id}

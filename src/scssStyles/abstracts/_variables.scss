@@ -1,10 +1,20 @@
 //Color variables
 
+$color-gray: rgb(187, 186, 186);
+$color-gray-dark: rgb(95, 94, 94);
+
 $color-black: rgb(0, 0, 0);
 
 //Border variables
 
-$border-sml: 0.1rem solid $color-black;
+$border-sml-black: 0.1rem solid $color-black;
+$border-sml-gray: 0.1rem solid $color-gray;
 
 //Border radius
-$border-radius-sml: 1rem;
+
+$border-radius-sml: 0.2rem;
+$border-radius-medium: 1rem;
+
+//Opacity
+
+$opacity-medium: 0.2;
