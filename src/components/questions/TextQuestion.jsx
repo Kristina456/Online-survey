@@ -1,8 +1,10 @@
 import React from "react";
 import "./TextQuestion.scss";
+import classNames from "classnames";
 
 export default function RatingQuestion({ question, onAnswer }) {
 	const { label, id, required, questionId } = question;
+	const className = classNames("text-question", "flex-column");
 
 	const onChange = (e) => {
 		onAnswer({
@@ -12,7 +14,7 @@ export default function RatingQuestion({ question, onAnswer }) {
 	};
 
 	return (
-		<div className="text-question">
+		<div className={className}>
 			<label htmlFor="question">{label}</label>
 			<input
 				className="text-question__input"

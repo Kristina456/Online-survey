@@ -10,6 +10,7 @@ This is a web application for an online survey for local film festival. The appl
 - Normalize 8.0.1
 - Prettier 2.4.1
 - Craco 6.4.1
+- classnames 2.3.1
 
 <br>
 
