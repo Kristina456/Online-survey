@@ -3,6 +3,7 @@ import { useNavigate } from "react-router";
 import Button from "../components/button/Button";
 import Card from "../components/card/Card";
 import { MockSurvay500 } from "../mocks/MockSurvay500";
+import "./ErrorPage.scss";
 
 export default function ErrorPage() {
 	const navigate = useNavigate();
@@ -13,8 +14,8 @@ export default function ErrorPage() {
 		return error.errors.map((q) => {
 			return (
 				<div>
-					<div>{q.title}</div>
-					<div>{q.detail}</div>
+					<h1>{q.title}</h1>
+					<p>{q.detail}</p>
 				</div>
 			);
 		});
@@ -26,8 +27,12 @@ export default function ErrorPage() {
 
 	return (
 		<Card>
-			<div>{showErrors()}</div>
-			<Button onClick={returnHome} value={buttonText} />
+			<div className="error-page">
+				<div>{showErrors()}</div>
+				<div className="error-page__btn">
+					<Button onClick={returnHome} value={buttonText} />
+				</div>
+			</div>
 		</Card>
 	);
 }
