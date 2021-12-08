@@ -1,0 +1,54 @@
+//Color variables
+$color-gray-light: rgb(255, 255, 255);
+$color-gray-medium: rgb(175, 175, 175);
+$color-gray-dark: rgb(95, 94, 94);
+
+$color-black: rgb(0, 0, 0);
+
+$color-white: white;
+
+$color-green: rgb(72, 145, 130);
+
+$font-family: 'Roboto', sans-serif;
+
+//Font size
+
+$font-base: 1.6rem;
+$font-size-sml: 0.8rem;
+$font-size-medium: 1rem;
+$font-size-semi-medium: 1.5rem;
+
+//Card width
+$card-min-width: 10rem;
+$card-max-width: 70rem;
+
+//Form background
+$background-img: url('../../img/film.jpg') center/cover;
+
+//Border variables
+$border-sml-black: 0.1rem solid $color-black;
+$border-sml-green: 0.1rem solid $color-green;
+$border-sml-white: 0.1rem solid $color-white;
+$border-sml-gray: 0.1rem solid $color-gray-medium;
+$border-medium-green: 3px solid $color-green;
+
+//Border radius
+$border-radius-sml: 0.2rem;
+$border-radius-medium: 1rem;
+$border-radius-large: 50%;
+
+//Opacity
+$opacity-medium: 0.1;
+
+//Transition
+$transition-primary: all 0.3s;
+
+//Box shadows
+$shadow-small: 0 0 2px 0.5px $color-green;
+$shadow-medium: 0 1rem 2rem rgba($color-black, 0.2);
+
+//Font weight
+$font-bold: 700;
+
+//Text align
+$align-center: center;

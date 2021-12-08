@@ -1,0 +1,17 @@
+.btn,
+.btn:visited {
+    text-transform: uppercase;
+    font-size: $font-size-semi-medium;
+    padding: 1.5rem 25%;
+    border-radius: $border-radius-medium;
+    transition: $transition-primary;
+    border: none;
+    cursor: pointer;
+    background-color: $color-green;
+    color: $color-white;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: $shadow-medium;
+}

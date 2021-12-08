@@ -1,0 +1,22 @@
+.survay-form {
+    position: relative;
+    font-size: 1.6rem;
+
+    .survay-form__title {
+        text-align: $align-center;
+    }
+
+    .survay-form__description > p {
+        margin: 0.5rem 0;
+    }
+
+    .survay-form__form {
+        margin: 2rem 0;
+        padding: 2rem;
+    }
+
+    .survay-form__btn {
+        margin-top: 3rem;
+        text-align: $align-center;
+    }
+}

@@ -1,0 +1,14 @@
+.text-question {
+    margin-bottom: 2rem;
+
+    .text-question__input {
+        height: 3rem;
+        border: $border-sml-gray;
+        border-radius: $border-radius-medium;
+        margin-top: 0.5rem;
+        padding: 0 1rem;
+        font-size: $font-size-semi-medium;
+        color: $color-gray-dark;
+        box-shadow: $shadow-small;
+    }
+}

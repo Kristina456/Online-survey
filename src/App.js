@@ -1,7 +1,8 @@
-import "./App.css";
+import './App.scss';
+import PageRouter from './PageRouter';
 
 function App() {
-	return <div className="App">Hello, World!</div>;
+    return <PageRouter />;
 }
 
 export default App;
