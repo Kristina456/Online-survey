@@ -1,19 +1,17 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router";
 import Button from "./button/Button";
 import RatingQuestion from "./questions/RatingQuestion";
 import TextQuestion from "./questions/TextQuestion";
 import "./SurvayForm.scss";
 
-export default function SurvayForm({ survay }) {
+export default function SurvayForm({ survay, publishAnswers }) {
 	const [answers, setAnswers] = useState([]);
-	const navigate = useNavigate();
 
 	const buttonText = "Submit";
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
-		navigate("/success", { state: answers });
+		publishAnswers(survay, answers);
 	};
 
 	const addAnswer = (answer) => {

@@ -7,10 +7,11 @@ import "./ErrorPage.scss";
 export default function ErrorPage() {
 	const location = useLocation();
 	const navigate = useNavigate();
+
 	const buttonText = "Return home";
 
 	const showErrors = () => {
-		return location.state.errors.map((q) => {
+		location.state.errors.map((q) => {
 			return (
 				<div>
 					<h1>{q.title}</h1>

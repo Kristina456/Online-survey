@@ -8,10 +8,10 @@ export default function SuccessPAge() {
 
 	const answers = () => {
 		if (location.state) {
-			return location.state.map((q) => (
-				<div>
+			return location.state.data.attributes.answers.map((q) => (
+				<div key={q.questionId}>
 					<span className="success__answers--question">
-						{q.questionId.toUpperCase()}:{" "}
+						{q.questionId.toUpperCase()}
 					</span>
 					<span className="success__answers--answer">{q.answer} </span>
 				</div>

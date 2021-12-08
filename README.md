@@ -12,6 +12,7 @@ This is a web application for an online survey for local film festival. The appl
 - Craco 6.4.1
 - classnames 2.3.1
 - msw 0.36.1
+- uuid 3.4.0
 
 <br>
 

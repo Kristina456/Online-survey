@@ -18,6 +18,6 @@ export const handlers = [
 		if (validation) {
 			return res(ctx.status(422), ctx.json(answers422));
 		}
-		return res(ctx.status(200), ctx.json(answers201));
+		return res(ctx.status(201), ctx.json(answers201));
 	}),
 ];
