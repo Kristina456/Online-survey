@@ -3,7 +3,7 @@ import "./TextQuestion.scss";
 import classNames from "classnames";
 
 export default function RatingQuestion({ question, onAnswer }) {
-	const { label, id, required, questionId } = question;
+	const { label, required, questionId } = question;
 	const className = classNames("text-question", "flex-column");
 
 	const onChange = (e) => {
@@ -20,7 +20,7 @@ export default function RatingQuestion({ question, onAnswer }) {
 				className="text-question__input"
 				type="text"
 				name="question"
-				id={id}
+				id={questionId}
 				required={required}
 				onChange={onChange}
 			/>

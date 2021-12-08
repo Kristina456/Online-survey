@@ -26,9 +26,9 @@ export default function RatingQuestion({ question, onAnswer }) {
 	};
 
 	return (
-		<div onChange={onChange} className="rating-question">
-			<div className="rating-question__label">{label}</div>
-			<div className="rating-question__radio-btn">{showQuestions()} </div>
+		<div onChange={onChange} className="rating-questions">
+			<div className="rating-questions__label">{label}</div>
+			<div className="rating-questions__radio">{showQuestions()} </div>
 		</div>
 	);
 }

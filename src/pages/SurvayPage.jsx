@@ -1,16 +1,22 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { Navigate } from "react-router";
 import Card from "../components/card/Card";
 import SurvayForm from "../components/SurvayForm";
-import { MockSurvay200 } from "../mocks/MockSurvay200";
 
 export default function SurvayPage() {
-	const survay = MockSurvay200;
+	const [survay, setSurvay] = useState(null);
+
+	useEffect(() => {
+		fetch("/api/v1/survey").then((response) => {
+			if (response.status === 200) {
+				response.json().then((json) => setSurvay(() => json));
+			}
+		});
+	}, []);
 
 	return (
 		<div>
-			<Card>
-				<SurvayForm survay={survay} />
-			</Card>
+			<Card>{survay && <SurvayForm survay={survay} />}</Card>
 		</div>
 	);
 }
