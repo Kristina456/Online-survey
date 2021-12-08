@@ -14,8 +14,11 @@ export default function ErrorPage() {
 		location.state.errors.map((q) => {
 			return (
 				<div>
-					<h1>{q.title}</h1>
-					<p>{q.detail}</p>
+					{q.title && <h1>{q.title}</h1>}
+					<div>
+						<div>{q.source && <strong>{q.source.pointer}</strong>}</div>
+						<p>{q.detail}</p>
+					</div>
 				</div>
 			);
 		});
