@@ -1,12 +1,10 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import ErrorPage from "./pages/ErrorPage";
-import SuccessPage from "./pages/SuccessPage";
-import SurvayPage from "./pages/SurvayPage";
+import { ErrorPage, SuccessPage, SurvayPage } from "./pages";
 
 export default function PageRouter() {
 	return (
-		<div className="App">
+		<div className="app">
 			<Router>
 				<Routes>
 					<Route path="/" element={<SurvayPage />}></Route>

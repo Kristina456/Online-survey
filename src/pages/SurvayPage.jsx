@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router";
-import Card from "../components/card/Card";
-import SurvayForm from "../components/SurvayForm";
+import { Card } from "../components/card";
+import { SurvayForm } from "../components";
 import { getSurvay, sendSurvayAnswers } from "../services/SurvayApiService";
 
 export default function SurvayPage({ error = 0 }) {

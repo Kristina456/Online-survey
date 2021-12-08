@@ -1,7 +1,6 @@
 import React, { useState } from "react";
-import Button from "./button/Button";
-import RatingQuestion from "./questions/RatingQuestion";
-import TextQuestion from "./questions/TextQuestion";
+import { Button } from "./button";
+import { RatingQuestion, TextQuestion } from "./questions";
 import "./SurvayForm.scss";
 
 export default function SurvayForm({ survay, publishAnswers }) {

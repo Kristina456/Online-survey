@@ -22,26 +22,15 @@
 	transition: $transition-primary;
 }
 
-//On mouse-over, add background color
-.radio-btn__label:hover input ~ .radio-btn__style-input,
-.radio-btn__label input:checked ~ .radio-btn__style-input {
-	background-color: $color-green;
+.radio-btn__value {
+	font-size: $font-size-semi-medium;
 }
 
-// Hidden when not checked
+// Hidden when checked
 .radio-btn__style-input:after {
 	content: "";
 	position: absolute;
 	display: none;
-}
-
-//Show the checkmark when checked
-.radio-btn__label input:checked ~ .radio-btn__style-input:after {
-	display: block;
-}
-
-//Style the checkmark
-.radio-btn__label .radio-btn__style-input:after {
 	top: 50%;
 	left: 30%;
 	width: 0.5rem;
@@ -52,6 +41,13 @@
 	transition: all 0.3s;
 }
 
-.radio-btn__value {
-	font-size: $font-size-semi-medium;
+//On mouse-over, add background color
+.radio-btn__input:hover ~ .radio-btn__style-input,
+.radio-btn__input:checked ~ .radio-btn__style-input {
+	background-color: $color-green;
+}
+
+//Show the checkmark when checked
+.radio-btn__input:checked ~ .radio-btn__style-input:after {
+	display: block;
 }

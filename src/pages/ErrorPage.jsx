@@ -1,7 +1,7 @@
 import React from "react";
 import { useLocation, useNavigate } from "react-router";
-import Button from "../components/button/Button";
-import Card from "../components/card/Card";
+import { Button } from "../components/button";
+import { Card } from "../components/card";
 import "./ErrorPage.scss";
 
 export default function ErrorPage() {

@@ -1,5 +1,5 @@
 import React from "react";
-import RadioButton from "./components/RadioButton";
+import { RadioButton } from "./components";
 import "./RatingQuestion.scss";
 
 export default function RatingQuestion({ question, onAnswer }) {

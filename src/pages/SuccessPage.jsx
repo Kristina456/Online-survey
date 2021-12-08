@@ -1,6 +1,6 @@
 import React from "react";
 import { useLocation } from "react-router";
-import Card from "../components/card/Card";
+import { Card } from "../components/card";
 import "./SuccessPage.scss";
 
 export default function SuccessPAge() {
