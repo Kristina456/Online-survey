@@ -1,8 +1,8 @@
 .success {
 	font-size: $font-base;
-	text-align: center;
+	text-align: $align-center;
 	.success__answers--question {
-		font-weight: bold;
+		font-weight: $font-bold;
 		color: $color-green;
 	}
 	.success__answers--answer {

@@ -1,10 +1,10 @@
 .card {
 	position: relative;
-	padding: 4rem;
 	min-width: $card-min-width;
 	max-width: $card-max-width;
-	box-shadow: $shadow-small;
 	border-radius: $border-radius-medium;
+	padding: 4rem;
+	box-shadow: $shadow-small;
 	@media screen and (max-width: 540px) {
 		padding: 2rem;
 	}
@@ -17,5 +17,5 @@
 	height: 100%;
 	opacity: $opacity-medium;
 	z-index: -1;
-	background: url("../../img/film.jpg") center/cover;
+	background: $background-img;
 }
