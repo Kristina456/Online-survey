@@ -33,7 +33,6 @@ export default function SurvayForm({ survay, publishAnswers }) {
                             onAnswer={addAnswer}
                         />
                     );
-
                 case 'rating':
                     return (
                         <RatingQuestion
