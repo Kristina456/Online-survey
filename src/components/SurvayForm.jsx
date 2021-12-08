@@ -59,7 +59,7 @@ export default function SurvayForm({ survay }) {
 				dangerouslySetInnerHTML={{ __html: survay.data.attributes.description }}
 			></div>
 			<form className="survay-form__form" onSubmit={handleSubmit}>
-				{showQuestions()}
+				{survay && showQuestions()}
 				<div className="survay-form__btn">
 					<Button value={buttonText} />
 				</div>

@@ -1,17 +1,16 @@
 import React from "react";
-import { useNavigate } from "react-router";
+import { useLocation, useNavigate } from "react-router";
 import Button from "../components/button/Button";
 import Card from "../components/card/Card";
-import { MockSurvay500 } from "../mocks/MockSurvay500";
 import "./ErrorPage.scss";
 
 export default function ErrorPage() {
+	const location = useLocation();
 	const navigate = useNavigate();
 	const buttonText = "Return home";
 
-	const error = MockSurvay500;
 	const showErrors = () => {
-		return error.errors.map((q) => {
+		return location.state.errors.map((q) => {
 			return (
 				<div>
 					<h1>{q.title}</h1>
@@ -25,10 +24,19 @@ export default function ErrorPage() {
 		navigate("/");
 	};
 
+	const showUnexpectedError = () => {
+		return (
+			<div>
+				<h1>Unexpected error happend</h1>
+			</div>
+		);
+	};
+
 	return (
 		<Card>
 			<div className="error-page">
-				<div>{showErrors()}</div>
+				<div>{location.state && showErrors()}</div>
+				<div>{!location.state && showUnexpectedError()}</div>
 				<div className="error-page__btn">
 					<Button onClick={returnHome} value={buttonText} />
 				</div>
