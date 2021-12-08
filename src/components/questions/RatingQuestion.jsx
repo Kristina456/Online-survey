@@ -1,5 +1,5 @@
 import React from "react";
-import Question from "./components/Question";
+import RadioButton from "./components/RadioButton";
 import "./RatingQuestion.scss";
 
 export default function RatingQuestion({ question, onAnswer }) {
@@ -13,7 +13,7 @@ export default function RatingQuestion({ question, onAnswer }) {
 	const showQuestions = () => {
 		const radioInputs = [];
 		for (let i = min; i <= max; i++) {
-			radioInputs.push(<Question key={i} value={i} required={required} />);
+			radioInputs.push(<RadioButton key={i} value={i} required={required} />);
 		}
 		return radioInputs;
 	};

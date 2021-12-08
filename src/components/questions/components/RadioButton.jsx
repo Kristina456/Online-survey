@@ -1,7 +1,7 @@
 import React from "react";
-import "./Question.scss";
+import "./RadioButton.scss";
 
-export default function Question({ value, required }) {
+export default function RadioButton({ value, required }) {
 	return (
 		<span className="radio-btn">
 			<label className="radio-btn__label">

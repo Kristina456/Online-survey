@@ -2,54 +2,31 @@ import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router";
 import Card from "../components/card/Card";
 import SurvayForm from "../components/SurvayForm";
-import { v4 as uuidv4 } from "uuid";
+import { getSurvay, sendSurvayAnswers } from "../services/SurvayApiService";
 
-export default function SurvayPage() {
+export default function SurvayPage({ error = 0 }) {
 	const navigate = useNavigate();
+
 	const [survay, setSurvay] = useState(null);
 
 	useEffect(() => {
-		fetch("/api/v1/survey").then((response) => {
+		getSurvay(error).then((response) => {
 			if (response.status === 200) {
 				response.json().then((json) => setSurvay(() => json));
 			} else {
 				response.json().then((json) => navigate("/error", { state: json }));
 			}
 		});
-	}, [navigate]);
+	}, []);
 
 	const publishAnswers = (survay, answers) => {
-		fetch(`/api/v1/survey/${survay.data.id}/answers`, {
-			method: "POST",
-			handlers: { "Content-Type": "application/json" },
-			body: JSON.stringify(mapToSurvayAnswersRequestBody(survay, answers)),
-		}).then((response) => {
+		sendSurvayAnswers(survay, answers, error).then((response) => {
 			if (response.status === 201) {
 				response.json().then((json) => navigate("/success", { state: json }));
 			} else {
 				response.json().then((json) => navigate("/error", { state: json }));
 			}
 		});
-	};
-
-	const mapToSurvayAnswersRequestBody = (survay, answers) => {
-		return {
-			data: {
-				type: "surveyAnswers",
-				id: uuidv4(),
-				attributes: {
-					answers: answers,
-				},
-				relationships: {
-					survay: {
-						data: {
-							type: survay.data.type,
-							id: survay.data.id,
-						},
-					},
-				},
-			},
-		};
 	};
 
 	const loading = () => {

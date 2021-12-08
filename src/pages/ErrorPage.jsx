@@ -11,13 +11,13 @@ export default function ErrorPage() {
 	const buttonText = "Return home";
 
 	const showErrors = () => {
-		location.state.errors.map((q) => {
+		return location.state.errors.map((e, index) => {
 			return (
-				<div>
-					{q.title && <h1>{q.title}</h1>}
+				<div key={index}>
+					{e.title && <h1>{e.title}</h1>}
 					<div>
-						<div>{q.source && <strong>{q.source.pointer}</strong>}</div>
-						<p>{q.detail}</p>
+						<div>{e.source && <strong>{e.source.pointer}</strong>}</div>
+						<p>{e.detail}</p>
 					</div>
 				</div>
 			);
