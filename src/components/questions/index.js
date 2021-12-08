@@ -1,4 +1,4 @@
-import TextQuestion from "./TextQuestion";
-import RatingQuestion from "./RatingQuestion";
+import TextQuestion from './TextQuestion';
+import RatingQuestion from './RatingQuestion';
 
 export { TextQuestion, RatingQuestion };

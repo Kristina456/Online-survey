@@ -1,14 +1,14 @@
 body {
-	box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 html {
-	font-size: 62.5%; //1rem = 10px
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	font-family: $font-family;
-	@media screen and (max-width: 540px) {
-		font-size: 50%; //1rem = 8px, 8/16 = 50%
-	}
+    font-size: 62.5%; //1rem = 10px
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: $font-family;
+    @media screen and (max-width: 540px) {
+        font-size: 50%; //1rem = 8px, 8/16 = 50%
+    }
 }

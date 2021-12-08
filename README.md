@@ -24,3 +24,10 @@ This is a web application for an online survey for local film festival. The appl
 $ nmp install
 $ npm start
 ```
+
+## Image
+
+<br>
+<p align="center">
+<img src="./gitHub-img/Login.png" width="400" height="auto" >
+</p>

@@ -1,3 +1,3 @@
-import SurvayForm from "./SurvayForm";
+import SurvayForm from './SurvayForm';
 
 export { SurvayForm };

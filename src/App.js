@@ -1,8 +1,8 @@
-import "./App.scss";
-import PageRouter from "./PageRouter";
+import './App.scss';
+import PageRouter from './PageRouter';
 
 function App() {
-	return <PageRouter />;
+    return <PageRouter />;
 }
 
 export default App;

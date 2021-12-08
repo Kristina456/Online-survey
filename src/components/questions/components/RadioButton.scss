@@ -1,53 +1,53 @@
 .radio-btn__label {
-	position: relative;
-	padding-left: 3.5rem;
-	margin-bottom: 1.2rem;
-	cursor: pointer;
-	font-size: 3rem;
+    position: relative;
+    padding-left: 3.5rem;
+    margin-bottom: 1.2rem;
+    cursor: pointer;
+    font-size: 3rem;
 }
 
 .radio-btn__input {
-	display: none;
+    display: none;
 }
 
 .radio-btn__style-input {
-	position: absolute;
-	top: 0;
-	left: 0;
-	height: 2.5rem;
-	width: 2.5rem;
-	border-radius: $border-radius-large;
-	background-color: $color-gray-light;
-	border: $border-medium-green;
-	transition: $transition-primary;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 2.5rem;
+    width: 2.5rem;
+    border-radius: $border-radius-large;
+    background-color: $color-gray-light;
+    border: $border-medium-green;
+    transition: $transition-primary;
 }
 
 .radio-btn__value {
-	font-size: $font-size-semi-medium;
+    font-size: $font-size-semi-medium;
 }
 
 // Hidden when checked
 .radio-btn__style-input:after {
-	content: "";
-	position: absolute;
-	display: none;
-	top: 50%;
-	left: 30%;
-	width: 0.5rem;
-	height: 1rem;
-	border: $border-sml-white;
-	border-width: 0 0.3rem 0.3rem 0;
-	transform: rotate(45deg) translate(-50%, -50%);
-	transition: all 0.3s;
+    content: '';
+    position: absolute;
+    display: none;
+    top: 50%;
+    left: 30%;
+    width: 0.5rem;
+    height: 1rem;
+    border: $border-sml-white;
+    border-width: 0 0.3rem 0.3rem 0;
+    transform: rotate(45deg) translate(-50%, -50%);
+    transition: all 0.3s;
 }
 
 //On mouse-over, add background color
 .radio-btn__input:hover ~ .radio-btn__style-input,
 .radio-btn__input:checked ~ .radio-btn__style-input {
-	background-color: $color-green;
+    background-color: $color-green;
 }
 
 //Show the checkmark when checked
 .radio-btn__input:checked ~ .radio-btn__style-input:after {
-	display: block;
+    display: block;
 }
