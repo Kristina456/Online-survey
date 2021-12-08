@@ -1,6 +1,6 @@
 # Online survey
 
-This is a web application for an online survey for local film festival. The application will be used to gather feedback on the films screend during the festival.
+This is a web application for an online survey for a local film festival. The application will be used to gather feedback on the films screened during the festival.
 
 <br>
 
